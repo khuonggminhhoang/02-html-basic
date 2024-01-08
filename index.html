@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Bai 2</title>
+</head>
+
+<body>
+    <!-- thẻ <video></video> để chèn video vào trang-->
+    <!-- Cách 1: -->
+    <video width="300" height="250" controls>
+        <source src="videos/vid_girl_cute.mp4" type="video/mp4">
+    </video>
+    <!-- Cách 2: -->
+    <video src="videos/vid_girl_cute.mp4" width="300" height="250" controls></video>
+    <br>
+
+    <!-- thẻ <audio></audio> để chèn audio vào trang, chú ý, ko có thuộc tính width height-->
+    <!-- Cách 1: -->
+    <audio controls>
+        <source src="audios/Last-Christmas-Cascada.mp3">
+    </audio>
+    <br>
+    <!-- Cách 2: -->
+    <audio src="audios/Last-Christmas-Cascada.mp3" controls></audio>
+    <br>
+
+
+    <!-- Thêm CSS cho dễ nhìn -->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+    </style>
+    <!-- 
+        - <table></table> : xác định một bảng
+        - <thead></thead> và <tbody></tbody> là thẻ đầu và thân của bảng
+        - <tr></tr> (table row): Xác định một hàng của bảng
+        - <th></th> (table header) : Xác định tiêu đề của bảng
+        - <td></td> (table data): Xác định dữ liệu ô của bảng
+     -->
+
+    <p><b><u>Ví Dụ 1:</u></b></p>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th>SĐT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Le Van A</td>
+                <td>0123456789</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Le Van B</td>
+                <td>0123456789</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <p><b><u>Ví Dụ 2:</u></b></p>
+    <!-- Thuộc tính rowspan = "3" trong thẻ td hoặc th để kéo dài (xuống dưới) ô cần chỉnh dài 3 ô-->
+    <!-- Thuộc tính colspan = "3" trong thẻ td hoặc th để kéo dài (sang ngang) ô cần chỉnh dài 3 ô-->
+    <table>
+        <thead>
+            <tr>
+                <th>Hàng 0 Cột 1</th>
+                <th>Hàng 0 Cột 2</th>
+                <th>Hàng 0 Cột 3</th>
+                <th>Hàng 0 Cột 4</th>
+                <th>Hàng 0 Cột 5</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="6">Hàng 1 Cột 1</td>
+                <td rowspan="4">Hàng 1 Cột 2</td>
+                <td rowspan="3">Hàng 1 Cột 3</td>
+                <td>Hàng 1 Cột 4</td>
+                <td>Hàng 1 Cột 5</td>
+            </tr>
+            <tr>
+                <td>Hàng 2 Cột 4</td>
+                <td>Hàng 2 Cột 5</td>
+            </tr>
+            <tr>
+                <td>Hàng 3 Cột 4</td>
+                <td>Hàng 3 Cột 5</td>
+            </tr>
+            <tr>
+                <td>Hàng 4 Cột 3</td>
+                <td>Hàng 4 Cột 4</td>
+                <td>Hàng 4 Cột 5</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Hàng 5 Cột 2</td>
+                <td rowspan="2">Hàng 5 Cột 3</td>
+                <td>Hàng 5 Cột 4</td>
+                <td>Hàng 5 Cột 5</td>
+            </tr>
+            <tr>
+                <td>Hàng 6 Cột 4</td>
+                <td>Hàng 6 Cột 5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b><u>Ví Dụ 3:</u></b></p>
+
+    <table>
+        <tbody>
+            <tr>
+                <td rowspan="11">Hàng 1 cột 1</td>
+                <td>Hàng 1 cột 2</td>
+                <td colspan="3">Hàng 1 cột 3</td>
+            </tr>
+
+            <tr>
+                <td>Hàng 2 cột 2</td>
+                <td colspan="3">Hàng 2 cột 3</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Hàng 3 cột 2</td>
+            </tr>
+
+            <tr>
+                <td>Hàng 4 cột 2</td>
+                <td colspan="3">Hàng 4 cột 3</td>
+            </tr>
+
+            <tr>
+                <td>Hàng 5 cột 2</td>
+                <td colspan="3">Hàng 5 cột 3</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Hàng 6 cột 2</td>
+            </tr>
+
+            <tr>
+                <td>Hàng 7 cột 1</td>
+                <td>Hàng 7 cột 2</td>
+                <td>Hàng 7 cột 3</td>
+                <td>Hàng 7 cột 4</td>
+            </tr>
+
+            <tr>
+                <td>Hàng 8 cột 1</td>
+                <td>Hàng 8 cột 2</td>
+                <td>Hàng 8 cột 3</td>
+                <td>Hàng 8 cột 4</td>
+            </tr>
+
+            <tr>
+                <td>Hàng 9 cột 1</td>
+                <td>Hàng 9 cột 2</td>
+                <td>Hàng 9 cột 3</td>
+                <td>Hàng 9 cột 4</td>
+            </tr>
+
+            <tr>
+                <td>Hàng 10 cột 1</td>
+                <td>Hàng 10 cột 2</td>
+                <td>Hàng 10 cột 3</td>
+                <td>Hàng 10 cột 4</td>
+            </tr>
+
+            <tr>
+                <td colspan="3">Hàng 11 cột 2</td>
+                <td>Hàng 11 cột 5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Thẻ ul, ol, li -->
+    <!-- 
+        <ul></ul> (Unorder List): đánh dấu chấm tròn ở đầu list item
+        <ol></ol> (Order List) : (mặc định) đánh dấu các chữ số ở đầu list item
+        <li></li> (List Item) : một mục trong danh sách
+     -->
+    <p><b>Ví Dụ 1:</b></p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <p><b>Ví dụ 2:</b></p>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+
+    <!-- 
+    Thuộc tính type của thẻ ol:
+        ● type="1": Mặc định. Các mục đánh dạng số.
+        ● type="A": Các mục đánh dạng chữ hoa.
+        ● type="a": Các mục đánh dạng chữ thường.
+        ● type="I": Các mục đánh dạng số La Mã viết hoa.
+        ● type="i": Các mục đánh dạng số La Mã viết thường.
+    -->
+
+    <p><b>Ví dụ về ul, ol lồng nhau:</b></p>
+    <ol>
+        <li>
+            Mục 1
+            <ul>
+                <li>Mục 1-1</li>
+                <li>Mục 1-2</li>
+                <li>Mục 1-3</li>
+            </ul>
+        </li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+    </ol>
+
+    <p><b>Ví dụ 2:</b></p>
+
+    <ol type="I">
+        <li>
+            Mục 1
+            <ol type="A">
+                <li>Mục 1-1</li>
+                <li>Mục 1-2</li>
+            </ol>
+        </li>
+        <li>
+            Mục 2
+            <ol type="A">
+                <li>Mục 2-1</li>
+                <li>Mục 2-2</li>
+                <li>Mục 2-3</li>
+                <li>
+                    Mục 2-4
+                    <ol type="i">
+                        <li>Mục 2-4-1</li>
+                        <li>Mục 2-4-2</li>
+                        <li>Mục 2-4-3</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>Mục 3</li>
+        <li>Mục 4</li>
+        <li>Mục 5</li>
+    </ol>
+
+    <!-- block (khối):
+        ● Luôn luôn bắt đầu trên một dòng mới.
+        ● Một số thẻ dạng block:
+        ● <div>
+        ● <h1>, <h2>, <h3>, <h4>, <h5>, <h6>
+        ● <p>
+        ● <ul>, <ol>, <li>
+        ● <table>
+        ● <form>
+     -->
+
+
+    <!-- inline (nội tuyến - trong hàng)
+        ● Ở trên cùng một hàng.
+        ● Chỉ xuống dòng khi hết chiều ngang.
+        ● Một số thẻ dạng inline:
+        ● <a>
+        ● <b>
+        ● <i>
+        ● <img>
+        ● <input>
+        ● <label>
+        ● <select>
+        ● <span>
+        ● <textarea>
+        ● <button>  
+    -->
+
+    <!-- 
+        ● Phần tử kiểu inline không được chứa phần tử kiểu block
+        ● Phần tử inline chỉ được chứa các phần tử inline, data
+        ● Phần tử block có thể chứa các phần tử kiểu block, inline, data
+        ● ngoại lệ, thẻ <a> kiểu inline có thể chứa phần tử block.
+     -->
+
+    <p><b>Form</b></p>
+
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="GET" autocomplete="on" novalidate>
+        <label for="fullName_id">Họ tên:</label>
+        <br />
+        <input type="text" id="fullName_id" name="fullName_name" />
+        <br />
+        <label for="email_id">Email:</label>
+        <br />
+        <input type="email" id="email_id" name="email_name" />
+        <br />
+        <label for="color_id">Chọn màu sắc:</label>
+        <br />
+
+        <select id="color_id" name="color">
+            <option>--Lựa chọn--</option>
+            <option value="yellow">Vàng</option>
+            <option value="red">Đỏ</option>
+            <option value="green">Xanh lá</option>
+            <option value="black">Đen</option>
+        </select>
+        <br>
+        <label for="txt_id">Note:</label>
+        <br>
+        <textarea id="txt_id" name="Note_name"></textarea>
+        <br />
+        <input type="submit" value="Gửi" />
+    </form>
+
+    <!-- 
+        ● action : Giá trị là một đường dẫn, xác định nơi nhận giá trị khi gửi. 
+        ● target : Chỉ định nơi hiển thị phản hồi sau khi gửi. (_self (default) hoặc _blank như trong thẻ <a>)
+        ● method : GET (default) sẽ gán các gtri nhận đc lên url, còn POST thì ko gán lên url
+        ● autocomplete: "on"(default)/"off" tự động hiển thị gơi ý lịch sử điền form trước đây
+        ● novalidate : không cần kiểm tra tính chính xác của dữ liệu khi gửi (thông thường không hay dùng)
+        -->
+
+    <br />
+    <!-- Form Element -->
+
+    <!--1. <input> : type default = text -->
+    <!--2. <label> : Thuộc tính for của thẻ <label> phải bằng thuộc tính id của element để liên kết -->
+
+    <p>
+        <label for="input_id"><b>Input form</b></label>
+        <input type="text" id="input_id" name="input_name">
+    </p>
+
+    <!-- 3. <select> :
+        ● Hiển thị dạng danh sách thả xuống (dropdown).
+        ● Các thẻ <option> là các tùy chọn để người dùng có thể chọn.
+        ● Để thay đổi lựa chọn mặc định thì thêm thuộc tính selected vào <option> muốn
+        chọn mặc định.
+    -->
+    <label for="colors"><b>Chọn màu đi:</b></label>
+    <br />
+    <select name="color" id="colors">
+        <option>-- Lựa chọn --</option>
+        <option value="Yellow">Vàng</option>
+        <option value="Green">Xanh lá</option>
+        <option selected value="Red">Đỏ</option>
+    </select>
+
+    <p><b>Input type:</b></p>
+    <label for="type_text_id"><b><i>type "text":</i></b></label>
+    <input type="text" id="type_text_id" name="type_text_name" />
+    <br><br>
+
+    <label for="type_password_id"><b><i>type "password": </i></b></label>
+    <input type="password" name="text_password_name" id="type_password_name">
+    <br><br>
+
+    <label for="type_number_id"><b><i>type "number":</i></b></label>
+    <input type="number" name="type_number_name" id="type_number_id">
+    <br><br>
+
+    <label for="type_date_id"><b><i>type "date":</i></b></label>
+    <input type="date" name="type_date_name" id="type_date_id">
+    <br><br>
+
+    <label for="type_datetime_local_id"><b><i>type "datetime-local":</i></b></label>
+    <input type="datetime-local" name="type_datetime_local_name" id="type_datetime_local_id">
+    <br><br>
+
+    <label for="type_time_id"><b><i>type "time":</i></b></label>
+    <input type="time" name="type_time_name" id="type_time_id">
+    <br><br>
+
+    <label for="type_file_id"><b><i>type "file"</i></b></label>
+    <input type="file" name="type_file" id="type_file_id">
+    <br><br>
+
+    <form action="https://www.w3schools.com/action_page.php"
+        method="POST"
+        target="_blank"
+    >
+        <label for="username_id">Username:</label>
+        <input type="text" name="username" id="username_id">
+        <br><br>
+
+        <label for="password_id">Password:</label>
+        <input type="password" name="password" id="password_id">
+        <br><br>
+
+        <label for="birthday_id">Birthday:</label>
+        <input type="date" name="birthday" id="birthday_id">
+        <br><br>
+
+        <label for="contest_id">Ca thi:</label>
+        <input type="datetime-local" name="contest" id="contest_id">
+        <br><br>
+
+        <label for="phone_id">Phone:</label>
+        <input type="tel" name="phone" id="phone_id">
+        <br><br>
+
+        <label for="email_id">Email:</label>
+        <input type="email" name="email" id="email_id">
+        <br><br>
+        
+        <label for="file_id">Upload File:</label>
+        <input type="file" name="file" id="file_id" accept=".java, .py, .cpp, .c">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- type checkbox -->
+    
+    <form action="https://www.w3schools.com/action_page.php"
+        method="GET"
+        target="_blank"
+    > 
+        <p><b>Những ngôn ngữ lập trình đã học:</b></p>
+        <input type="checkbox" name="language" id="language_c" value="C"> 
+        <label for="language_c">Ngôn ngữ C</label>
+        <br>
+        <input type="checkbox" name="language" id="language_java" value="Java">
+        <label for="language_java">Ngôn ngữ Java</label>
+        <br>
+        <input type="checkbox" name="language" id="language_python" value="Python">
+        <label for="language_python">Ngôn ngữ Python</label>
+        <br>
+        <input type="submit" value="Gửi">
+    </form>   
+
+    <!-- type radio -->
+    
+    <form action="https://www.w3schools.com/action_page.php"
+        method="GET"
+        target="_blank"
+    > 
+        <p><b>Những ngôn ngữ lập trình đã học:</b></p>
+        <input type="radio" name="language" id="language_c_id" value="C"> 
+        <label for="language_c_id">Ngôn ngữ C</label>
+        <br>
+        <input type="radio" name="language" id="language_java_id" value="Java">
+        <label for="language_java_id">Ngôn ngữ Java</label>
+        <br>
+        <input type="radio" name="language" id="language_python_id" value="Python">
+        <label for="language_python_id">Ngôn ngữ Python</label>
+        <br>
+        <input type="submit" value="Gửi">
+    </form>  
+
+</body>
+
+</html>
